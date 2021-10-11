@@ -1,9 +1,7 @@
 package com.example.bruchingco
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -22,6 +20,8 @@ class Appetizers : AppCompatActivity() {
         val btnAddDish = findViewById<Button>(R.id.btnAddDish)
         val rvDish = findViewById<RecyclerView>(R.id.rvDish)
         val tvDish = findViewById<TextView>(R.id.tvDish)
+
+        //val etDishQuantity = findViewById<EditText>(R.id.etQuantity)
         val etDishTitle = findViewById<EditText>(R.id.etDishTitle)
 
         rvDish.adapter = dishAdapter
@@ -29,10 +29,11 @@ class Appetizers : AppCompatActivity() {
 
         btnAddDish.setOnClickListener{  // funziona
             val dishTitle = etDishTitle.text.toString()
-            //val dishQuantity = null
+            //val dishQuantity = etDishQuantity.text.toString().toInt()
             if(dishTitle.isNotEmpty()){
-                val dish = Dish(dishTitle) // Puoi passare anche QUANTITY, da aggiungere
-                //val quantity = dishQuantity
+                val dish = Dish(dishTitle) // Puoi passare anche QUANTITY
+                //val dishQ = Dish(dishQuantity)
+
                 dishAdapter.addDish(dish)
                 etDishTitle.text.clear()
             }

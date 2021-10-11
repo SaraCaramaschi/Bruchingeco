@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+//import com.example.bruchingco.MainActivity
 
 class Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,5 +18,11 @@ class Menu : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // bottone da menu ad appetizers
+        val btnScan= findViewById<Button>(R.id.btnScan)
+        btnScan.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
