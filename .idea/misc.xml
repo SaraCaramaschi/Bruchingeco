@@ -5,9 +5,13 @@
       <map>
         <entry key="app/src/main/res/layout/activity_appetizers.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_ble_operations.xml" value="0.1578125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.175" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_schermata0.xml" value="0.343812488206255" />
+        <entry key="app/src/main/res/layout/edittext_hex_payload.xml" value="0.175" />
         <entry key="app/src/main/res/layout/item_dish.xml" value="0.2314189504061527" />
+        <entry key="app/src/main/res/layout/row_characteristic.xml" value="0.175" />
+        <entry key="app/src/main/res/layout/row_scan_result.xml" value="0.175" />
       </map>
     </option>
   </component>
