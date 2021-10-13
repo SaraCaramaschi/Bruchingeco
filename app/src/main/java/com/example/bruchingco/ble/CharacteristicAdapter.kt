@@ -15,7 +15,7 @@
  */
 
 //package com.punchthrough.blestarterappandroid
-package com.example.bruchingco
+package com.example.bruchingco.ble
 
 import android.bluetooth.BluetoothGattCharacteristic
 import android.view.View

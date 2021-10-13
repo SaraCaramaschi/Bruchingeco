@@ -15,7 +15,7 @@
  */
 
 //package com.punchthrough.blestarterappandroid
-package com.example.bruchingco
+package com.example.bruchingco.ble
 
 import android.annotation.SuppressLint
 import android.app.Activity

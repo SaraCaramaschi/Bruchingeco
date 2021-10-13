@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.example.bruchingco
+package com.example.bruchingco.ble
 
 import android.bluetooth.le.ScanResult
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bruchingco.R
 import kotlinx.android.synthetic.main.row_scan_result.view.device_name
 import kotlinx.android.synthetic.main.row_scan_result.view.mac_address
 import kotlinx.android.synthetic.main.row_scan_result.view.signal_strength

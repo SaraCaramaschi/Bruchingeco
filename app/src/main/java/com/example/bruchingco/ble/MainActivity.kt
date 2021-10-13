@@ -1,4 +1,4 @@
-package com.example.bruchingco
+package com.example.bruchingco.ble
 
 import android.Manifest
 import android.app.Activity
@@ -19,6 +19,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
+import com.example.bruchingco.BuildConfig
+import com.example.bruchingco.R
 import com.punchthrough.blestarterappandroid.ble.ConnectionEventListener
 import com.punchthrough.blestarterappandroid.ble.ConnectionManager
 import kotlinx.android.synthetic.main.activity_main.scan_button
