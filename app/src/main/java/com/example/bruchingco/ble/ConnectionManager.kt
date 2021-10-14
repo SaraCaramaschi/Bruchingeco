@@ -367,7 +367,28 @@ object ConnectionManager {
                     Timber.w("Discovered ${services.size} services for ${device.address}.")
                     printGattTable()
                     requestMtu(device, GATT_MAX_MTU_SIZE)
-                    listeners.forEach { it.get()?.onConnectionSetupComplete?.invoke(this) }
+                    listeners.forEach { it.get()?.onConnectionSetupComplete?.invoke(this)
+                    }
+
+                    gatt.getService(UUID.randomUUID()).characteristics.forEach { //per ogni caratteristiche faccio cose
+                        when(it.uuid){ //se è batteria fai certe cose
+
+                        } //when freccette grafe
+                    }
+
+                    //altro servizio impo: console  (debog service uuid)
+                    // io la leggo ma non va nella funz leggi ma nel suo callback
+                    // ONCHARACTERISTICREAD
+
+                    // scarica libreria benasher44 stringa-->uuid
+                    // private val messi in uuid
+
+                    // it: iterazione ciclo
+                    // 4 servizi
+                    // if uuid==... prendilo  gatt.getservice
+                    // readable ecc --> read.char..
+
+                    //timber.d compare in modalità debug
                 } else {
                     Timber.e("Service discovery failed due to status $status")
                     teardownConnection(gatt.device)
@@ -393,10 +414,18 @@ object ConnectionManager {
             characteristic: BluetoothGattCharacteristic,
             status: Int
         ) {
-            with(characteristic) {
+            with(characteristic) { //ASSOCIA L'INPUT
                 when (status) {
                     BluetoothGatt.GATT_SUCCESS -> {
                         Timber.i("Read characteristic $uuid | value: ${value.toHexString()}")
+                        //inserire altro when per descriminare quali caratteristiche stanno arrivando
+                        // readBatterydata da creare funzione reserved/tohexstrin/toint
+                        //sessionmanager che raccoglie tutte le variabili, companion object, singleton kotlin
+                        // accessibili ovunque
+                        //tutto ciò per caratteristiche READABLE
+                        //la caratteristica console invia i messaggi
+                        //descrittore attributo a cui diamo un valore per attivare le notifiche
+                        // oncharacteristicchange leggi solo quando cambia
                         listeners.forEach { it.get()?.onCharacteristicRead?.invoke(gatt.device, this) }
                     }
                     BluetoothGatt.GATT_READ_NOT_PERMITTED -> {

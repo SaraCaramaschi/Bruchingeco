@@ -33,8 +33,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res/layout/layout_ble',
-                        'src/main/res/layout',
+                srcDirs 'src/main/res/layout',
                         'src/main/res'
             }
         }
