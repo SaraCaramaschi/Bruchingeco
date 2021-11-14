@@ -16,8 +16,7 @@ class Menu : AppCompatActivity() {
         // bottone da menu ad appetizers
         val btnApetizzers = findViewById<Button>(R.id.btnApe)
         btnApetizzers.setOnClickListener {
-            val intent = Intent(this, Appetizers::class.java)
-            startActivity(intent)
+         
         }
 
     }
