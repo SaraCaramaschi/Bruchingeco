@@ -20,11 +20,5 @@ class Menu : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // bottone da menu ad appetizers
-        val btnScan= findViewById<Button>(R.id.btnScan)
-        btnScan.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
